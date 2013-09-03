@@ -29,7 +29,7 @@ if (isset($rsschannels)) {
 <?php endif ?>
   <script type="text/javascript" src="<?php echo ROOT ?>jsScuttle.php"></script>
 <?php endif ?>
-
+	<script type="text/javascript" src="<?php echo ROOT ?>js/bootstrap.js"></script>
  </head>
  <body>
 
