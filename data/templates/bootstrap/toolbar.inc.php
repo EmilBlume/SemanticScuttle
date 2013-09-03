@@ -5,7 +5,7 @@ if ($userservice->isLoggedOn() && is_object($currentUser)) {
 ?>
   
 
-<div class="navbar">
+<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
        
     <!-- Be sure to leave the brand out there if you want it shown -->
