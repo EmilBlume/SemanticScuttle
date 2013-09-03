@@ -1,11 +1,14 @@
-<?php echo '<'; ?>?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
- <head>
-  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-  <title><?php echo filter($GLOBALS['sitename'] .(isset($pagetitle) ? ' » ' . $pagetitle : '')); ?></title>
-  <link rel="icon" type="image/png" href="<?php echo $theme->resource('icon.png');?>" />
-  <link rel="stylesheet" type="text/css" href="<?php echo $theme->resource('scuttle.css');?>" />
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="utf-8"/>
+	<title><?php echo filter($GLOBALS['sitename'] .(isset($pagetitle) ? ' » ' . $pagetitle : '')); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <link rel="stylesheet" media="screen" href="<?php echo $theme->resource('bootstrap.css');?>" />
+  <link rel="stylesheet" media="screen" href="<?php echo $theme->resource('show-grid.css');?>" />
+  <link rel="stylesheet" media="screen" href="<?php echo $theme->resource('bootstrap-responsive.css');?>" />
+
   <link rel="search" type="application/opensearchdescription+xml" href="<?php echo ROOT ?>api/opensearch.php" title="<?php echo htmlspecialchars($GLOBALS['sitename']) ?>"/>
 <?php
 if (isset($rsschannels)) {
