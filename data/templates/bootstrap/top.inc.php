@@ -39,16 +39,14 @@ if (isset($rsschannels)) {
 $headerstyle = '';
 if(isset($_GET['popup'])) {
 	$headerstyle = ' class="popup"';
+	echo '<div id="header"' . $headerstyle . '>&nbsp;</div>' ;
 }
 ?>
-
-<div id="header" <?php echo $headerstyle; ?>>
-<h1><a href="<?php echo ROOT ?>"><?php echo $GLOBALS['sitename']; ?></a></h1>
 <?php
 if(!isset($_GET['popup'])) {
 	$this->includeTemplate('toolbar.inc');
 }
-?></div>
+?>
 
 <?php
 if (isset($subtitlehtml)) {
