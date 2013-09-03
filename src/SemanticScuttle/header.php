@@ -11,6 +11,7 @@
  * @author   Benjamin Huynh-Kim-Bang <mensonge@users.sourceforge.net>
  * @author   Christian Weiske <cweiske@cweiske.de>
  * @author   Eric Dane <ericdane@users.sourceforge.net>
+ * @author	 Emil Blume https://github.com/EmilBlume
  * @license  GPL http://www.gnu.org/licenses/gpl.html
  * @link     http://sourceforge.net/projects/semanticscuttle
  */
@@ -158,10 +159,16 @@ if (!defined('UNIT_TEST_MODE') || defined('HTTP_UNIT_TEST_MODE')) {
     //API files define that, so we need a way to support both of them
     if (!isset($httpContentType)) {
         if (DEBUG_MODE) {
+						if ($theme == 'bootstrap') {
+						// since bootstrap will use <!doctype html>
+						// we will need it for proper validation
+						$httpContentType = 'text/html';
+						} else {
             //using that mime type makes all javascript nice in Chromium
             // it also serves as test base if the pages really validate
             $httpContentType = 'application/xhtml+xml';
-        } else {
+						}
+				} else {
             //until we are sure that all pages validate, we
             // keep the non-strict mode on for normal installations
             $httpContentType = 'text/html';
