@@ -7,8 +7,6 @@
 	
   <link rel="stylesheet" media="screen" href="<?php echo $theme->resource('bootstrap.css');?>" />
   <link rel="stylesheet" media="screen" href="<?php echo $theme->resource('show-grid.css');?>" />
-  <link rel="stylesheet" media="screen" href="<?php echo $theme->resource('bootstrap-responsive.css');?>" />
-
   <link rel="search" type="application/opensearchdescription+xml" href="<?php echo ROOT ?>api/opensearch.php" title="<?php echo htmlspecialchars($GLOBALS['sitename']) ?>"/>
 <?php
 if (isset($rsschannels)) {
